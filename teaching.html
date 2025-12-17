@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arman Shokrollahi's Teaching </title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+/* --- Teaching Page Styles --- */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.course {
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px 20px;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: #f5f5f5;
+}
+
+.course-header:hover {
+  background: #e0e0e0;
+}
+
+.course-header i {
+  transition: transform 0.3s ease;
+}
+
+.course-header.active i {
+  transform: rotate(180deg);
+}
+
+/* Smooth animated dropdown */
+.course-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 0.95rem;
+  color: #333;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.course-content.open {
+  padding: 15px 20px 15px 20px;
+}
+
+.course-content ul {
+  padding-left: 20px;
+}
+
+.course-content li {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .course-header {
+    font-size: 1rem;
+  }
+  .course-content {
+    font-size: 0.9rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container navbar">
+    <div class="logo">Arman Shokrollahi</div>
+    <nav id="nav-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="teaching.html" class="active">Teaching</a></li>
+      </ul>
+    </nav>
+	 <div id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <h1 class="page-title">Teaching</h1>
+
+  <!-- COURSE 1 -->
+<div class="course">
+  <div class="course-header">
+    Introduction to Artificial Intelligence
+    <i class="fas fa-chevron-down"></i>
+  </div>
+
+  <div class="course-office">
+    <strong>Office Hours:</strong> Mondays 14:00-16:00
+  </div>
+
+  <div class="course-content">
+    <ul>
+      <li><strong>Semester:</strong> Fall 2025</li>
+      <li><strong>Credits:</strong> 3</li>
+      <li><strong>Syllabus:</strong> Search algorithms, machine learning basics, knowledge representation, planning, and reasoning.</li>
+    </ul>
+  </div>
+</div>
+
+  <!-- COURSE 2 -->
+ <div class="course">
+  <div class="course-header">
+    Algorithm Design
+    <i class="fas fa-chevron-down"></i>
+  </div>
+
+  <div class="course-office">
+    <strong>Office Hours:</strong> Mondays 14:00-16:00
+  </div>
+
+  <div class="course-content">
+    <ul>
+      <li><strong>Semester:</strong> Fall 2025</li>
+      <li><strong>Credits:</strong> 3</li>
+      <li><strong>Syllabus:</strong> Search algorithms, machine learning basics, knowledge representation, planning, and reasoning.</li>
+    </ul>
+  </div>
+</div>
+
+  <!-- COURSE 3 -->
+  <div class="course">
+  <div class="course-header">
+    Pattern Recognition
+    <i class="fas fa-chevron-down"></i>
+  </div>
+
+  <div class="course-office">
+    <strong>Office Hours:</strong> Mondays 14:00-16:00
+  </div>
+
+  <div class="course-content">
+    <ul>
+      <li><strong>Semester:</strong> Fall 2025</li>
+      <li><strong>Credits:</strong> 3</li>
+      <li><strong>Syllabus:</strong> Search algorithms, machine learning basics, knowledge representation, planning, and reasoning.</li>
+    </ul>
+  </div>
+</div>
+
+</main>
+
+<script>
+// Smooth dropdown toggle
+const courseHeaders = document.querySelectorAll('.course-header');
+
+courseHeaders.forEach(header => {
+  header.addEventListener('click', () => {
+    const content = header.nextElementSibling;
+    const isOpen = content.classList.contains('open');
+
+    // Close all courses
+    document.querySelectorAll('.course-content').forEach(c => {
+      c.style.maxHeight = null;
+      c.classList.remove('open');
+    });
+    document.querySelectorAll('.course-header').forEach(h => h.classList.remove('active'));
+
+    if (!isOpen) {
+      content.style.maxHeight = content.scrollHeight + "px";
+      content.classList.add('open');
+      header.classList.add('active');
+    }
+  });
+});
+</script>
+
+
+<script src="js/main.js"></script>
+
+<script>
+document.querySelectorAll('.course-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const course = header.parentElement;
+    course.classList.toggle('active');
+  });
+});
+</script>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-line"></div>
+    <div class="footer-text">
+      © <span id="year"></span> Arman Shokrollahi ·  
+        Steal my website's <a href="https://github.com/armsho/academic2" target="_blank">source code</a> or the <a href="https://github.com/armsho/academic1" target="_blank">Next.js</a> version.
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arman Shokrollahi</title>
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+  <div class="container navbar">
+    <div class="logo">Arman Shokrollahi</div>
+
+    <nav id="nav-links">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+      </ul>
+    </nav>
+
+    <div id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<main class="container hero">
+
+  <div class="profile">
+    <img src="images/profile.jpg" alt="Profile Photo">
+
+    <div class="social-links">
+      <a href="mailto:armsh3@gmail.com" class="icon email" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="CV.pdf" class="icon cv" title="CV"><i class="fas fa-file-alt"></i></a>
+      <a href="https://scholar.google.com" target="_blank" class="icon scholar" title="Scholar"><i class="fas fa-graduation-cap"></i></a>
+      <a href="https://github.com/armsho" target="_blank" class="icon github" title="GitHub"><i class="fab fa-github"></i></a>   
+    </div>
+  </div>
+
+  <div class="info">
+    <!-- Desktop Name -->
+  <!--  <p><strong>Research Interests:</strong></p>
+  <ul class="research-interests">
+    <li>Artificial Intelligence</li>
+    <li>Robotics</li>
+    <li>Machine Learning</li>
+  </ul> -->
+  <p> 
+ I am currently a researcher at Sharif University of Technology. Previously, I was at Microsoft Research, and before that, I worked as a Software Engineer at Google Cloud in Pittsburgh and at Johnson Controls in York. I received my M.Sc. and Ph.D. both from West Virginia University.
+  </p> <br>
+    <p>My research interests lie at the forefront of robotics, AI, and machine learning, focusing on areas such as embodied AI for adaptive robots, vision-language-action systems, real-time decision-making, and human-robot collaboration in dynamic environments. I am also exploring adaptive reinforcement learning for multi-agent systems, edge AI for real-time decision-making, soft and bio-inspired robotics, and safe, explainable autonomy. My goal is to advance intelligent systems that are not only capable and efficient but also trustworthy and aligned with human needs.</p>
+  </div>
+
+<!-- News Section -->
+<section class="news">
+  <h2>Latest News</h2>
+  <ul class="news-list">
+    <li><strong>Dec 10, 2025:</strong> Accepted Paper at ICRA 2025 – Our work on adaptive multi-robot systems has been accepted at ICRA 2025.</li>
+    <li><strong>Nov 20, 2025:</strong> Workshop on Edge AI – I will present a workshop on Edge AI for autonomous robots at NeurIPS 2025.</li>
+    <li><strong>Oct 15, 2025:</strong> New Lab Website Launched – Our research lab website has been redesigned to showcase our projects, publications, and open positions.</li>
+  </ul>
+</section>
+
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</main>
+
+<script src="js/main.js"></script>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-line"></div>
+    <div class="footer-text">
+      © <span id="year"></span> Arman Shokrollahi ·  
+        Steal my website's <a href="https://github.com/armsho/academic2" target="_blank">source code</a> or the <a href="https://github.com/armsho/academic1" target="_blank">Next.js</a> version.
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
+

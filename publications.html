@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arman Shokrollahi's Publications</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+/* --- PUBLICATIONS PAGE STYLES --- */
+
+
+.publication {
+    display: flex;
+    gap: 20px;
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 5px;
+    align-items: center;
+    position: relative;
+}
+
+.publication img {
+    width: 130px;
+    height: 95px;
+    border-radius: 10px;
+    object-fit: cover;
+    background: #f2f2f2;
+}
+
+.pub-number {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: #222;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.pub-content {
+    flex: 1;
+}
+
+.pub-title {
+    font-family: 'Jost', 'Barlow', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.pub-authors {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-variant: small-caps;
+    font-size: 1rem;
+    color: #444;
+}
+
+.pub-journal {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.pub-buttons button {
+    margin-right: 8px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    font-size: 0.85rem;
+}
+
+.btn-pdf { background: #d9534f; }
+.btn-abs { background: #0275d8; }
+.btn-bib { background: #5bc0de; }
+.btn-video { background: #5cb85c; }
+.btn-slides { background: #f0ad4e; }
+
+/* Popup modal */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 550px;
+    border-radius: 10px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+.copy-btn {
+    background: #4CAF50;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .publication {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .publication img {
+        width: 100%;
+        height: 160px;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header>
+  <div class="container navbar">
+    <div class="logo">Arman Shokrollahi</div>
+
+    <nav id="nav-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html" class="active">Publications</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+      </ul>
+    </nav>
+
+    <div id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</header>
+
+
+<!-- CONTENT -->
+<main class="container">
+
+<h1 class="page-title">Publications</h1>
+
+  <div class="publication-list">
+
+  <!-- PUBLICATION 1 -->
+  <div class="publication"
+       data-title="Deep learning for AI systems efficient"
+       data-authors="Arman Shokrollahi, Jane Doe, John Smith"
+       data-abstract="This paper explores advanced deep learning strategies for optimizing AI systems in high-performance environments. We propose a hybrid architecture integrating transformers with efficient convolutional modules to reduce computational cost while maintaining accuracy."
+       data-bib="@article{sho2024deepai,
+  title={Deep Learning for Efficient AI Systems},
+  author={Sho, Arman and Doe, Jane and Smith, John},
+  journal={Journal of Artificial Intelligence Research},
+  year={2024}
+}"
+      data-keywords="AI, Machine Learning, Deep Learning">
+      
+    <div class="pub-number">[1]</div>
+    <img src="images/publications/paper1.gif" alt="Paper Image">
+    
+    <div class="pub-content">
+      <div class="pub-title">Deep learning for AI systems efficient</div>
+      <div class="pub-authors">Arman Shokrollahi, Jane Doe, John Smith</div>
+      <div class="pub-journal"><em>Journal of Artificial Intelligence Research, 2025</em></div>
+
+      <div class="pub-buttons">
+        <button class="btn-pdf">PDF</button>
+        <button class="btn-abs modal-open" data-type="abstract">Abstract</button>
+        <button class="btn-bib modal-open" data-type="bib">BibTeX</button>
+        <button class="btn-video">Video</button>
+        <button class="btn-slides">Slides</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PUBLICATION 2 -->
+  <div class="publication"
+       data-title="Transformer-Based Models for Multimodal Research"
+       data-authors="Arman Sho, Lisa Miller, David Clark"
+       data-abstract="We introduce a multimodal transformer that fuses visual and textual representations for advanced document understanding. Our experiments show significant improvements over prior state-of-the-art benchmarks."
+       data-bib="@inproceedings{sho2025multimodal,
+  title={Transformer-Based Models for Multimodal Research},
+  author={Sho, Arman and Miller, Lisa and Clark, David},
+  booktitle={Proceedings of the International Conference on Machine Learning},
+  year={2025}
+}">
+      
+    <div class="pub-number">[2]</div>
+    <img src="images/publications/paper2.webp" alt="Paper Image">
+    
+    <div class="pub-content">
+      <div class="pub-title">Improving detection of influential nodes in complex networks</div>
+      <div class="pub-authors"><a href="https://scholar.google.com/citations?user=4CNO2RMAAAAJ&hl=en">Amir Sheikhahmadi</a><sup>*</sup>, <a href="https://scholar.google.com/citations?user=Z4QLt3IAAAAJ&hl=en">Mohammad Ali Nematbakhsh</a>, Arman Shokrollahi<sup>*</sup></div>
+      <div class="pub-journal"><em>Physica A: Statistical Mechanics and its Applications, 2015</em></div>
+
+      <div class="pub-buttons">
+        <button class="btn-pdf">PDF</button>
+        <button class="btn-abs modal-open" data-type="abstract">Abstract</button>
+        <button class="btn-bib modal-open" data-type="bib">BibTeX</button>
+        <button class="btn-video">Video</button>
+        <button class="btn-slides">Slides</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+</main>
+
+
+
+<!-- UNIVERSAL MODAL -->
+<div class="modal" id="globalModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <h3 id="modalTitle"></h3>
+    <p id="modalAuthors" style="font-style:italic; color:#666;"></p>
+
+    <!-- copy button only for BibTeX -->
+    <button id="copyBibBtn" class="copy-btn" style="display:none;">Copy BibTeX</button>
+
+    <pre id="modalBib" style="display:none; white-space:pre-wrap;"></pre>
+    <p id="modalAbstract" style="display:none;"></p>
+
+  </div>
+</div>
+
+
+<script src="js/main.js"></script>
+
+<script>
+// ---------- Dynamic Universal Modal ----------
+const modal = document.getElementById("globalModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalAuthors = document.getElementById("modalAuthors");
+const modalBib = document.getElementById("modalBib");
+const modalAbstract = document.getElementById("modalAbstract");
+const copyBibBtn = document.getElementById("copyBibBtn");
+
+document.querySelectorAll(".modal-open").forEach(button => {
+    button.addEventListener("click", () => {
+
+        const pub = button.closest(".publication");
+
+        const title = pub.dataset.title;
+        const authors = pub.dataset.authors;
+        const abstract = pub.dataset.abstract;
+        const bib = pub.dataset.bib;
+
+        modalTitle.textContent = title;
+        modalAuthors.textContent = authors;
+
+        modalBib.style.display = "none";
+        modalAbstract.style.display = "none";
+        copyBibBtn.style.display = "none";
+
+        if (button.dataset.type === "abstract") {
+            modalAbstract.style.display = "block";
+            modalAbstract.textContent = abstract;
+        }
+
+        if (button.dataset.type === "bib") {
+            modalBib.style.display = "block";
+            modalBib.textContent = bib;
+            copyBibBtn.style.display = "inline-block";
+        }
+
+        modal.style.display = "flex";
+    });
+});
+
+function closeModal() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(e) {
+    if (e.target === modal) closeModal();
+};
+
+// ------ COPY TO CLIPBOARD ------
+copyBibBtn.addEventListener("click", () => {
+    navigator.clipboard.writeText(modalBib.textContent);
+
+    copyBibBtn.textContent = "Copied!";
+    setTimeout(() => (copyBibBtn.textContent = "Copy BibTeX"), 2000);
+});
+</script>
+
+<script>
+// Reverse numbering for publications
+document.addEventListener("DOMContentLoaded", () => {
+    const pubs = [...document.querySelectorAll(".publication")];
+
+    // Reverse order (latest should get number [1])
+    pubs.reverse().forEach((pub, index) => {
+        const num = pub.querySelector(".pub-number");
+        if (num) num.textContent = `[${index + 1}]`;
+    });
+});
+</script>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-line"></div>
+    <div class="footer-text">
+      © <span id="year"></span> Arman Shokrollahi ·  
+        Steal my website's <a href="https://github.com/armsho/academic2" target="_blank">source code</a> or the <a href="https://github.com/armsho/academic1" target="_blank">Next.js</a> version.
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arman Shokrollahi's Research Projects</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+/* ================== PROJECTS ================== */
+
+.projects {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.project {
+  display: flex;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.project:last-child {
+  border-bottom: none;
+}
+
+.project-img {
+  width: 120px;
+  height: 90px;
+  background: #f2f2f2;
+  border-radius: 10px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.project-content {
+  flex: 1;
+}
+
+.project-title {
+  font-family: 'Jost', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.project-meta {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.project-desc {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.project-links {
+  margin-top: 8px;
+}
+
+.project-links a {
+  margin-right: 15px;
+  font-size: 0.9rem;
+  color: #004080;
+  text-decoration: none;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+  }
+
+  .project-img {
+    width: 100%;
+    height: 160px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header>
+  <div class="container navbar">
+    <div class="logo">Arman Shokrollahi</div>
+    <nav id="nav-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+      </ul>
+    </nav>
+	
+	 <div id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+<h1 class="page-title">Research Projects</h1>
+
+<!-- PROJECT 1 -->
+<div class="project">
+  <img src="images/projects/project1.jpg" alt="Project Image" class="project-img">
+
+  <div class="project-content">
+    <div class="project-title">Embodied AI for Adaptive Robotics</div>
+    <div class="project-meta">2023 – Present · Robotics, AI</div>
+    <div class="project-desc">
+      This project investigates embodied intelligence for autonomous robots operating in dynamic environments, combining vision-language-action models with reinforcement learning.
+    </div>
+
+    <div class="project-links">
+      <a href="#">Project Page</a>
+      <a href="#">Paper</a>
+      <a href="#">Code</a>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 2 -->
+<div class="project">
+  <img src="images/projects/project2.jpg" alt="Project Image" class="project-img">
+
+  <div class="project-content">
+    <div class="project-title">Edge AI for Real-Time Decision Making</div>
+    <div class="project-meta">2022 – 2024 · Edge Computing</div>
+    <div class="project-desc">
+      Development of lightweight deep learning models for real-time inference on embedded systems with applications in autonomous vehicles and drones.
+    </div>
+
+    <div class="project-links">
+      <a href="#">Paper</a>
+      <a href="#">Slides</a>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 3 -->
+<div class="project">
+  <img src="images/projects/project3.gif" alt="Project Image" class="project-img">
+
+  <div class="project-content">
+    <div class="project-title">Safe and Explainable Autonomous Systems</div>
+    <div class="project-meta">2021 – 2023 · Explainable AI</div>
+    <div class="project-desc">
+      Focused on interpretable decision-making and safety guarantees for autonomous agents interacting with humans in uncertain environments.
+    </div>
+
+    <div class="project-links">
+      <a href="#">Paper</a>
+      <a href="#">Dataset</a>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<script src="js/main.js"></script>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-line"></div>
+    <div class="footer-text">
+      © <span id="year"></span> Arman Shokrollahi ·  
+        Steal my website's <a href="https://github.com/armsho/academic2" target="_blank">source code</a> or the <a href="https://github.com/armsho/academic1" target="_blank">Next.js</a> version.
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

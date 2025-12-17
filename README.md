@@ -1,0 +1,1 @@
+This website is a lightly edited version of a [Next.js academic website template](https://github.com/armsho/academic1) originally developed for professors and students. The current version is implemented using HTML, CSS, and JavaScript.
